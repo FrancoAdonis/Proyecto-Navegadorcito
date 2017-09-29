@@ -1,0 +1,110 @@
+
+*{	/*Ni relleno ni margen*/
+	padding: 0;
+	margin: 0;
+}
+body{
+	font-family: verdana;
+
+}
+header{
+	width: 100%;
+	background-color: #f2f2f2;
+	box-shadow: 1px 1px 5px #000;
+
+}
+nav{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin: 0 auto;
+	width: 100%;
+
+}
+h1,h2,h3{
+	text-align: center;
+	padding: 15px 0px 15px 0px;
+}
+nav ul li{
+	display: inline;
+	margin: 0 auto;
+}
+nav ul li a{
+	color: #6e6e6e;
+	text-decoration: none;
+	padding: 12px 20px 12px 20px;
+	/*margin: 0 auto;*/
+	background-color: transparent;
+	border-bottom: 9px solid transparent;
+	/*transition: border-botom:.7s;*/
+	-webkit-transition:border-botom:.7s;
+	-moz-transition:border-botom:.7s;
+	-o-transition:border-botom:.7s;
+}
+nav ul li a:hover{
+	border-bottom: 9px solid #6e6e6e;
+}
+section{
+	padding: 20px 10px 20px 10px;
+}
+article{
+	padding: 30px 5px 10px 5px;
+}
+
+
+
+
+.frm_nuevo ul{
+	width: 800px;
+    list-style-type: none;
+    list-style-position: outside;
+    margin: 0px;
+    padding: 0px;
+}
+.frm_nuevo li{
+	padding: 12px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+	.frm_nuevo li:first-child, .frm_nuevo li:last-child {
+        border-bottom: 1px solid #777;
+    }
+
+/*********** Formulario Cabecera H2  *********/
+.frm_nuevo h2 {
+    margin: 0;
+    display: inline;
+}
+.required_notification {
+    color: #d45252;
+    margin: 5px 0 0 0;
+    display: inline;
+    float: right;
+}
+
+/********* Elementos de Formulario **********/
+.frm_nuevo label {
+    width: 200px;
+    margin-top: 3px;
+    display: inline-block;
+    float: left;
+    /*padding: 3px;*/
+}
+
+.frm_nuevo input {
+    height: 20px;
+    width: 220px;
+    padding: 5px 8px;
+}
+	.frm_nuevo .txtDv{
+		width: 5px;
+	}
+
+.frm_nuevo textarea {
+    padding: 8px;
+    width: 300px;
+}
+
+.frm_nuevo button {
+    float: right;
+    padding: 5px 5px 5px 5px;
+}

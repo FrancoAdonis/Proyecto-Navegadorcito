@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-schema="navegadorcitodb"/>
+  <table-filter match-name="asignatura"/>
+  <table-filter match-name="carrera"/>
+  <table-filter match-name="carrera_estudiante"/>
+  <table-filter match-name="inscripcion_asignatura"/>
+  <table-filter match-name="malla_curricular"/>
+  <table-filter match-name="matricula"/>
+  <table-filter match-name="programacion_profesor"/>
+  <table-filter match-name="tipo_perfil"/>
+  <table-filter match-name="usuario"/>
+</hibernate-reverse-engineering>

@@ -1,0 +1,32 @@
+
+body {
+    background-color: #ffffff;
+    font-family: Lucida Grande, Lucida Sans, Arial, sans-serif;
+    font-size: 10px;
+    color: #616161;
+}
+
+styleCol {vertical-align:top;}
+
+.vertTop {
+vertical-align:top;
+}
+
+div#contenido{
+    /*width: 980px;*/
+    margin: 0 auto;
+}
+
+#columnaizquierda{
+    height:100%;
+    width:50%;
+    position:absolute;
+    left:0;
+}
+
+#columnaderecha{
+    height:100%;
+    width:50%;
+    position:absolute;
+    right:0;
+}

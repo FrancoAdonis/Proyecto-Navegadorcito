@@ -1,0 +1,54 @@
+/*
+    MODIFICADO : Christian Castro
+    FECHA      : 25-05-2012
+*/
+
+.tableStyle {
+  border: 0px solid black;
+  border-spacing: 0px;
+}
+
+.tableStyle thead tr{
+  font-family: Arial, monospace;
+  font-size: 14px;
+}
+
+.tableStyle thead tr th{
+  border-bottom: 2px solid black;
+  border-top: 1px solid black;
+  margin: 0px;
+  padding: 2px;
+  background-color: #cccccc;
+}
+
+.tableStyle tr {
+  font-family: arial, monospace;
+  color: black;
+  font-size:12px;
+  background-color: white;
+}
+
+.tableStyle tr.odd {
+  background-color: #AAAAAA;
+}
+
+.tableStyle tr td, th{
+  border-bottom: 1px solid black;
+  padding: 2px;
+  text-align: center;
+}
+
+.tableStyle a:link{
+  font-family:arial, monospace;
+  text-decoration: none;
+  color: teal;
+}
+
+.tableStyle a:hover{
+  text-decoration: underline;
+}
+
+.tableStyle a:visited{
+  color:black;
+  text-decoration: none;
+}
