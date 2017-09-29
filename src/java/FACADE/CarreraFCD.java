@@ -8,6 +8,7 @@ package FACADE;
 import DAO.CarreraDAO;
 import POJOS.Carrera;
 import UTIL.HibernateUtil;
+import java.util.List;
 import org.hibernate.Session;
 
 public abstract class CarreraFCD {
@@ -17,4 +18,11 @@ public abstract class CarreraFCD {
         sesion.close();        
         return obj;
     }
+    
+    public static List<Carrera> listarCarrera() {
+        Session sesion = HibernateUtil.getSessionFactory().openSession();
+        List<Carrera> listObj = CarreraDAO.listarCarrera(sesion);
+        sesion.close();
+        return listObj;
+    }        
 }

@@ -8,6 +8,7 @@ package FACADE;
 import DAO.UsuarioDAO;
 import POJOS.Usuario;
 import UTIL.HibernateUtil;
+import java.util.List;
 import org.hibernate.Session;
 
 public abstract class UsuarioFCD {
@@ -17,4 +18,11 @@ public abstract class UsuarioFCD {
         sesion.close();        
         return obj;
     }
+    
+    public static List<Usuario> listarUsuario() {
+        Session sesion = HibernateUtil.getSessionFactory().openSession();
+        List<Usuario> listObj = UsuarioDAO.listarUsuario(sesion);
+        sesion.close();
+        return listObj;
+    }        
 }

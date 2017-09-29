@@ -51,12 +51,7 @@
         </tr>
         <tr>
             <td colspan="3" style="color: #cd0a0a; font-size:14px;">${mensaje}</td>
-        </tr>
-        <tr>            
-            <td colspan="3">
-                <a href="AddUser.jsp">Nuevo usuario</a>
-            </td>
-        </tr>        
+        </tr>       
         </table>      
  </form>        
     </body>

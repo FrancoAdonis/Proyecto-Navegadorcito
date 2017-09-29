@@ -8,7 +8,7 @@ body {
 	font-size: 13px;
 	font-family: "trebuchet ms", helvetica, sans-serif;
 	color: #8C8C73;
-	line-height: 18px;
+	line-height: 5px;
 }
 
 a {
@@ -25,7 +25,7 @@ sup {
 }
 
 p {
-	margin-bottom: 14px;
+	margin-bottom: 10px;
 	text-align: justify;
 }
 

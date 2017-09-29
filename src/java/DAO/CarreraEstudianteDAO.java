@@ -16,10 +16,20 @@ import org.hibernate.criterion.Restrictions;
  */
 public abstract class CarreraEstudianteDAO implements Serializable {
     
-    public static CarreraEstudiante getCarreraEstudiante (Session sesion, int usuRut){
+    public static CarreraEstudiante getCarreraEstudiante (Session sesion, int usuRut, int codCarrera){
+
         return (CarreraEstudiante)
                 sesion.createCriteria(CarreraEstudiante.class)
-                .add(Restrictions.eq("usuRut", usuRut))
+                .add(Restrictions.eq("id.usuRut", usuRut))
+                .add(Restrictions.eq("id.codCarrera", codCarrera))
                 .setMaxResults(1).uniqueResult();
     }
+    
+    public static CarreraEstudiante getCarreraEstudiante (Session sesion, int usuRut){
+
+        return (CarreraEstudiante)
+                sesion.createCriteria(CarreraEstudiante.class)
+                .add(Restrictions.eq("id.usuRut", usuRut))
+                .setMaxResults(1).uniqueResult();
+    }    
 }

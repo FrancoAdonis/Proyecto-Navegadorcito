@@ -1,7 +1,6 @@
 <%-- 
     Document   : resultado
     Created on : 28-08-2017, 22:48:06
-    Author     : karina.pasten
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -18,11 +17,12 @@
         <script type="text/javascript" src="js/jquery-ui-1.8.15.custom.min.js"></script>      
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Bienvenidos a Navegadorcito</title>
     </head>
-    <body>
-        <h1>Hello World!</h1>
-        <hr>
-        <p>Hola <s:property value="nombre" /></p>
+    <body style="margin-left: 40px; margin-top: 10px">
+        <table>
+        <tr><td class="texto2"><br><br><br></td></tr>
+        <tr><td class="texter">DATO AGREGADO/ELIMINADO CON EXITO!!!!</td></tr>
+        </table>
     </body>
 </html>

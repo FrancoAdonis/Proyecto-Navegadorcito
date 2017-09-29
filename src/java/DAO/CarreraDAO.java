@@ -7,8 +7,10 @@ package DAO;
 
 import POJOS.Carrera;
 import java.io.Serializable;
+import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
+import org.hibernate.criterion.Order;
 
 /**
  *
@@ -22,4 +24,10 @@ public abstract class CarreraDAO implements Serializable {
                 .add(Restrictions.eq("codCarrera", codCarrera))
                 .setMaxResults(1).uniqueResult();
     }
+    
+    public static List<Carrera> listarCarrera(Session session) {
+        return session.createCriteria(Carrera.class)
+                .addOrder(Order.asc(("nomCarrera")))
+                .list();
+    }      
 }

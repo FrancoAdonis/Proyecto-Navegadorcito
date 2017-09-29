@@ -14,14 +14,197 @@
         </action>          
         
         <action name="checkLogin" class="WebApp.Action" method="doLogin">
-           <!-- <result name="success" >checkLogin</result>-->
             <result name="error">/error.jsp</result>
             <result name="success">/resultado.jsp</result>
             <result name="ADMINISTRADOR">/Administrador.jsp</result>
             <result name="PROFESOR">/Profesor.jsp</result>
             <result name="ESTUDIANTE">/Estudiante.jsp</result>
-            <result name="CONTENEDOR">/contenedor.jsp</result>
         </action>
+        <!-- ALUMNO -->
+        <action name="crudAluUsuario" class="WebApp.Action" method="crudAluUsuario">
+            <result name="crudAluUsuario">/crudAluUsuario.jsp</result>
+        </action>    
         
+        <action name="crudAluInscripcion" class="WebApp.Action" method="crudAluInscripcion">
+            <result name="crudAluInscripcion">/crudAluInscripcion.jsp</result>
+        </action>  
+        
+        <action name="modificarAluUsuario" class="WebApp.Action" method="modificarAluUsuario">
+            <result name="success">/crudAluUsuario.jsp</result>
+        </action>          
+        
+        <action name="filtrarInscripcion" class="WebApp.Action" method="filtrarInscripcion">
+            <result name="success">/crudAluInscripcion.jsp</result>
+        </action>  
+        
+        <action name="limpiarFiltroInsc" class="WebApp.Action" method="limpiarFiltroInsc">
+            <result name="success">/crudAluInscripcion.jsp</result>
+        </action>                     
+       <!-- FIN ALUMNO -->    
+       
+       <!-- PROFESOR -->                      
+        <action name="crudProgramacion" class="WebApp.Action" method="crudProgramacion">
+            <result name="crudProgramacion">/crudProgramacion.jsp</result>
+        </action> 
+        
+        <action name="filtrarProgramacion" class="WebApp.Action" method="filtrarProgramacion">
+            <result name="success">/crudProgramacion.jsp</result>
+        </action>    
+        
+        <action name="limpiarFiltro" class="WebApp.Action" method="limpiarFiltro">
+            <result name="success">/crudProgramacion.jsp</result>
+        </action>        
+        
+        <action name="crudCurso" class="WebApp.Action" method="crudCurso">
+            <result name="crudCurso">/crudCurso.jsp</result>
+        </action>    
+        
+        <action name="buscarCurso" class="WebApp.Action" method="buscarCurso">
+            <result name="success">/crudCurso.jsp</result>
+        </action>          
+        
+        <action name="verFicha" class="WebApp.Action" method="verFicha">
+            <result name="success">/crudFicha.jsp</result>
+        </action>                                                                                  
+       <!-- FIN PROFESOR -->  
+       
+        <!-- ADMINISTRADOR -->
+        <action name="crudUsuario" class="WebApp.Action" method="crudUsuario">
+            <result name="crudUsuario">/crudUsuario.jsp</result>
+        </action>        
+        
+        <action name="crudAsignatura" class="WebApp.Action" method="crudAsignatura">
+            <result name="crudAsignatura">/crudAsignatura.jsp</result>
+        </action> 
+        
+        <action name="crudCarreras" class="WebApp.Action" method="crudCarreras">
+            <result name="crudCarreras">/crudCarreras.jsp</result>
+        </action>   
+        
+        <action name="crudInscripcion" class="WebApp.Action" method="crudInscripcion">
+            <result name="crudInscripcion">/crudInscripcion.jsp</result>
+        </action>   
+        
+        <action name="crudMalla" class="WebApp.Action" method="crudMalla">
+            <result name="crudMalla">/crudMalla.jsp</result>
+        </action>   
+        
+        <action name="crudMatricula" class="WebApp.Action" method="crudMatricula">
+            <result name="crudMatricula">/crudMatricula.jsp</result>
+        </action>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+       
+        <action name="buscarAsignatura" class="WebApp.Action" method="buscarAsignatura">
+            <result name="success">/crudAsignatura.jsp</result>
+        </action> 
+                        
+        <action name="agregarAsignatura" class="WebApp.Action" method="agregarAsignatura">
+            <result name="success">/crudAsignatura.jsp</result>
+        </action> 
+        
+        <action name="modificarAsignatura" class="WebApp.Action" method="modificarAsignatura">
+            <result name="success">/crudAsignatura.jsp</result>
+        </action> 
+                
+        <action name="eliminarAsignatura" class="WebApp.Action" method="eliminarAsignatura">
+            <result name="success">/crudAsignatura.jsp</result>
+        </action>    
+        
+        <action name="buscarCarrera" class="WebApp.Action" method="buscarCarrera">
+            <result name="success">/crudCarreras.jsp</result>
+        </action> 
+                
+        <action name="agregarCarrera" class="WebApp.Action" method="agregarCarrera">
+            <result name="success">/crudCarreras.jsp</result>
+        </action> 
+        
+        <action name="modificarCarrera" class="WebApp.Action" method="modificarCarrera">
+            <result name="success">/crudCarreras.jsp</result>
+        </action>         
+        
+        <action name="eliminarCarrera" class="WebApp.Action" method="eliminarCarrera">
+            <result name="success">/crudCarreras.jsp</result>
+        </action>  
+
+        <action name="buscarCarreraEstudiante" class="WebApp.Action" method="buscarCarreraEstudiante">
+            <result name="success">/resultado.jsp</result>
+        </action> 
+        
+        <action name="saveOrUpdateCarreraEstudiante" class="WebApp.Action" method="saveOrUpdateCarreraEstudiante">
+            <result name="success">/resultado.jsp</result>
+        </action> 
+        
+        <action name="modificarCarreraEstudiante" class="WebApp.Action" method="modificarCarreraEstudiante">
+            <result name="success">/resultado.jsp</result>
+        </action> 
+                
+        <action name="eliminarCarreraEstudiante" class="WebApp.Action" method="eliminarCarreraEstudiante">
+            <result name="success">/resultado.jsp</result>
+        </action>   
+        
+        <action name="buscarInscripcionAsignatura" class="WebApp.Action" method="buscarInscripcionAsignatura">
+            <result name="success">/crudInscripcion.jsp</result>
+        </action> 
+                
+        <action name="saveOrUpdateInscripcionAsignatura" class="WebApp.Action" method="saveOrUpdateInscripcionAsignatura">
+            <result name="success">/crudInscripcion.jsp</result>
+        </action> 
+                 
+        <action name="eliminarInscripcionAsignatura" class="WebApp.Action" method="eliminarInscripcionAsignatura">
+            <result name="success">/crudInscripcion.jsp</result>
+        </action>   
+        
+        <action name="buscarMallaCurricular" class="WebApp.Action" method="buscarMallaCurricular">
+            <result name="error">/error.jsp</result>
+            <result name="success">/crudMalla.jsp</result>
+        </action> 
+                
+        <action name="saveOrUpdateMallaCurricular" class="WebApp.Action" method="saveOrUpdateMallaCurricular">
+            <result name="success">/crudMalla.jsp</result>
+        </action>        
+                
+        <action name="eliminarMallaCurricular" class="WebApp.Action" method="eliminarMallaCurricular">
+            <result name="success">/crudMalla.jsp</result>
+        </action>          
+        
+        <action name="buscarMatricula" class="WebApp.Action" method="buscarMatricula">
+            <result name="success">/crudMatricula.jsp</result>
+        </action> 
+                
+        <action name="saveOrUpdateMatricula" class="WebApp.Action" method="saveOrUpdateMatricula">
+            <result name="success">/crudMatricula.jsp</result>
+        </action>         
+                
+        <action name="eliminarMatricula" class="WebApp.Action" method="eliminarMatricula">            
+            <result name="success">/crudMatricula.jsp</result>
+        </action>                                                
+        
+        <action name="buscarProgramacionProfesor" class="WebApp.Action" method="buscarProgramacionProfesor">
+            <result name="success">/resultado.jsp</result>
+        </action>         
+        
+        <action name="saveOrUpdateProgramacionProfesor" class="WebApp.Action" method="agregarProgramacionProfesor">
+            <result name="success">/resultado.jsp</result>
+        </action>       
+        
+        <action name="eliminarProgramacionProfesor" class="WebApp.Action" method="eliminarProgramacionProfesor">
+            <result name="success">/resultado.jsp</result>
+        </action>             
+        
+        <action name="buscarUsuario" class="WebApp.Action" method="buscarUsuario">
+            <result name="success">/crudUsuario.jsp</result>
+        </action>
+                
+        <action name="agregarUsuario" class="WebApp.Action" method="agregarUsuario">
+            <result name="success">/crudUsuario.jsp</result>
+        </action> 
+
+        <action name="modificarUsuario" class="WebApp.Action" method="modificarUsuario">
+            <result name="success">/crudUsuario.jsp</result>
+        </action>  
+                
+        <action name="eliminarUsuario" class="WebApp.Action" method="eliminarUsuario">
+            <result name="success">/crudUsuario.jsp</result>
+        </action>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+        <!-- ADMINISTRADOR -->
     </package>
 </struts>

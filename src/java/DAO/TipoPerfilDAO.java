@@ -7,7 +7,9 @@ package DAO;
 
 import POJOS.TipoPerfil;
 import java.io.Serializable;
+import java.util.List;
 import org.hibernate.Session;
+import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
 /**
@@ -22,4 +24,11 @@ public abstract class TipoPerfilDAO implements Serializable {
                 .add(Restrictions.eq("codPerfil", codPerfil))
                 .setMaxResults(1).uniqueResult();
     }
+    
+    public static List<TipoPerfil> listarTipoPerfil(Session session) {
+        return session.createCriteria(TipoPerfil.class)
+                .addOrder(Order.asc(("nomPerfil")))
+                .list();
+    }    
+
 }

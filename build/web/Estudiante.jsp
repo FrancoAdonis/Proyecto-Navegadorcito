@@ -1,4 +1,6 @@
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="/struts-tags" prefix="s" %>
 <!DOCTYPE html>
 <html>
         <link type="text/css" rel="stylesheet" href="css/theme.css" />
@@ -12,6 +14,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Bienvenidos a Navegadorcito</title>
+<script language="JavaScript">       
+    function enviarMenu(accion){
+        document.formAccionMenu.action = accion.valueOf();   
+        document.formAccionMenu.submit();        
+    }    
+</script>         
     </head>
     <body style="margin-left: 40px; margin-top: 10px">
         
@@ -20,21 +28,17 @@
 		<hgroup>
 			<h1>NAVEGADORCITO - Ingenieria Web Avanzada</h1>
                         <h3>::.   Gesti&oacute;n Estudiantes   .::</h3>
-		</hgroup>
+		</hgroup>              
 		<nav>
-			<ul>
-				<li><a href="">Datos Personales</a></li>
-				<li><a href="">Asignaturas</a></li>
-				<li><a href="">Salir</a></li>
-			</ul>
-		</nav>
-	</header>
-
-        <section>
-		
-	</section>
-	<footer>
-		Pie de pagina
-	</footer>       
+                    <ul>
+                        <form name="formAccionMenu" action="" method="POST">
+                        <input type="hidden" name="usuRut"  value="${usuRut}" />                            
+                            <li><a href="javascript:enviarMenu('crudAluUsuario.action')">Datos Personales</a></li>                              
+                            <li><a href="javascript:enviarMenu('crudAluInscripcion.action')">Asignaturas Inscritas</a></li>                                  
+                            <li><a href="index.jsp">Salir</a></li>   
+                        </form>                                
+                    </ul>                                         
+		</nav>                
+	</header>   
     </body>
 </html>

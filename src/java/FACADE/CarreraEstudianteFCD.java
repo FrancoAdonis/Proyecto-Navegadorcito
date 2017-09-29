@@ -11,10 +11,20 @@ import UTIL.HibernateUtil;
 import org.hibernate.Session;
 
 public abstract class CarreraEstudianteFCD {
+    
+    public static CarreraEstudiante getCarreraEstudiante(int usuRut, int codCarrera){
+        
+        Session sesion = HibernateUtil.getSessionFactory().openSession();
+        CarreraEstudiante obj = CarreraEstudianteDAO.getCarreraEstudiante(sesion, usuRut, codCarrera);
+        sesion.close();        
+        return obj;
+    }
+    
     public static CarreraEstudiante getCarreraEstudiante(int usuRut){
+        
         Session sesion = HibernateUtil.getSessionFactory().openSession();
         CarreraEstudiante obj = CarreraEstudianteDAO.getCarreraEstudiante(sesion, usuRut);
         sesion.close();        
         return obj;
-    }
+    }    
 }

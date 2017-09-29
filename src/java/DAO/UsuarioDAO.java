@@ -7,7 +7,9 @@ package DAO;
 
 import POJOS.Usuario;
 import java.io.Serializable;
+import java.util.List;
 import org.hibernate.Session;
+import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
 /**
@@ -22,4 +24,10 @@ public abstract class UsuarioDAO implements Serializable {
                 .add(Restrictions.eq("usuRut", usuRut))
                 .setMaxResults(1).uniqueResult();
     }
+    
+    public static List<Usuario> listarUsuario(Session session) {
+        return session.createCriteria(Usuario.class)
+                .addOrder(Order.asc(("usuNombre")))
+                .list();
+    }      
 }

@@ -8,13 +8,25 @@ package FACADE;
 import DAO.TipoPerfilDAO;
 import POJOS.TipoPerfil;
 import UTIL.HibernateUtil;
+import java.util.ArrayList;
+import java.util.List;
+import javax.faces.model.SelectItem;
 import org.hibernate.Session;
 
 public abstract class TipoPerfilFCD {
+    
     public static TipoPerfil getTipoPerfil(int codPerfil){
         Session sesion = HibernateUtil.getSessionFactory().openSession();
         TipoPerfil obj = TipoPerfilDAO.getTipoPerfil(sesion, codPerfil);
         sesion.close();        
         return obj;
     }
+
+    public static List<TipoPerfil> listarTipoPerfil() {
+        Session sesion = HibernateUtil.getSessionFactory().openSession();
+        List<TipoPerfil> listObj = TipoPerfilDAO.listarTipoPerfil(sesion);
+        sesion.close();
+        return listObj;
+    }           
+
 }
